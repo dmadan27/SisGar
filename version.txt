@@ -1,0 +1,27 @@
+SisGar Version:
+
+# Beta 0.1 :
+	# Fitur :
+	=> List, Tambah, dan Edit Data Member Standar
+	=> List, Tambah, dan Edit Data Harga Standar 
+	=> List, Tambah, dan Edit Data Parkir Standar
+	=> List, Tambah, Edit, dan Expired Kontrak Data Sewa Standar
+	=> List, Tambah, dan Edit Data Keuangan Standar
+	=> List, Tambah, dan Edit Data Admin Standar
+	=> List Log Admin Standar
+	=> Beranda (Info Jumlah Admin, Jumlah Tempat Parkir, Jumlah Penyewa, dan Jumlah Saldo) Standar
+
+	# Metode Pemrgraman :
+	=> Native procedural
+
+	# Bahasa Pemrograman :
+	=> Database : SQL - MariaDB
+	=> PHP 7.1.1, JavaScript 
+
+	# Teknik SQL :
+	=> Native procedural Mysqli dengan prepared statement
+
+	# Fitur Kedepannya :
+	=> Fitur Delete soft, Delete hard, dan Recycle Bin
+	=> Penggunaan AJAX disetiap pengelolaan data.
+	=> Penerapan .htaccess secara menyeluruh

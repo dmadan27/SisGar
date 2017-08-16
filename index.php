@@ -33,11 +33,11 @@
 		=> $sess_auth - TRUE
 		=> $sess_kodeAkses - TRUE/Ada nilainya.
 	*/
-	if(!$sess_login || !$sess_auth || !$sess_kodeAkses){
-		reset_session(); //hapus semua session yang ada
-		header("Location: ".base_url."login.php"); //arahkan ke login
-        die();
-	}
+	// if(!$sess_login || !$sess_auth || !$sess_kodeAkses){
+	// 	reset_session(); //hapus semua session yang ada
+	// 	header("Location: ".base_url."login.php"); //arahkan ke login
+ //        die();
+	// }
 
 	//cek kode akses
 	//1. prepare statement

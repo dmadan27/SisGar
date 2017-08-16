@@ -2,7 +2,7 @@
 	//buat koneksi dengan db
 	$dbHost = "localhost"; //host/server yg dipakai
 	$dbUser = "root"; //username host/server 
-	$dbPass = "VixyBlack27"; //password host
+	$dbPass = ""; //password host
 	$dbName = "garasi"; //nama database
 	$koneksi = mysqli_connect($dbHost,$dbUser,$dbPass,$dbName); //menampung koneksi
 

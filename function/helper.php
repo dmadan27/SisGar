@@ -1,5 +1,7 @@
 <?php
 	define("base_url", "http://localhost/garasi/");
+	define("version", "Beta v0.2");
+
 
 	//fungsi format rupiah
 	function rupiah($harga){

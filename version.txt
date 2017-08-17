@@ -25,3 +25,8 @@ SisGar Version:
 	=> Fitur Delete soft, Delete hard, dan Recycle Bin
 	=> Penggunaan AJAX disetiap pengelolaan data.
 	=> Penerapan .htaccess secara menyeluruh
+
+# Beta 0.2
+	# Migrasi mysqli ke PDO di semua module
+
+	# Normalisasi ulang database

@@ -4,7 +4,7 @@
 	<!-- footer -->
 	<footer class="main-footer">
     	<div class="pull-right hidden-xs">
-      		<b>Beta Version</b> 0.1
+      		<?= version; ?>
     	</div>
     	<strong>SI Sewa Garasi Cesara | Copyright &copy; <?php echo date("Y"); ?> <a href="http://lordraze.com">lordRaze.com</a></strong> All rights reserved.
   	</footer>

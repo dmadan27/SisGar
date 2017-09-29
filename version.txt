@@ -30,3 +30,6 @@ SisGar Version:
 	# Migrasi mysqli ke PDO di semua module
 
 	# Normalisasi ulang database
+
+# Beta 1.0
+	=> Migrasi konsep MVC Struktural

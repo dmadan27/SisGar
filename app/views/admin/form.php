@@ -166,10 +166,10 @@
 	</div>	
 </section>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var base_url = "<?php print base_url; ?>";
     var urlParams = <?php echo json_encode($_GET, JSON_HEX_TAG);?>;
-</script>
+</script> -->
 <script type="text/javascript">
 	$(document).ready(function(){
 		var arr_hakAkses = getHakAkses();

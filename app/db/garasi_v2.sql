@@ -38,7 +38,7 @@ CREATE TABLE t_log_admin(
 CREATE TABLE m_parkir(
 	id int AUTO_INCREMENT NOT NULL,
 	no_parkir char(3) UNIQUE,
-	status char(1), -- not_available (n) : tidak tersedia, available (a) : tersedia
+	status char(1), -- 0 : tidak tersedia, 1 : tersedia
 	CONSTRAINT pk_m_parkir_id PRIMARY KEY(id)
 );
 
@@ -401,8 +401,8 @@ END;
 
 -- view member
 CREATE OR REPLACE VIEW v_member AS
-	SELECT m.id id_member, m.no_ktp, m.nama, m.no_telp, m.alamat, 
-		m.pekerjaan, n.id id_nopol, n.nopol, n.foto
+	SELECT m.id id_member, m.no_ktp, m.nama, m.no_telp, m.alamat, m.pekerjaan, 
+		GROUP_CONCAT(n.nopol separator ', ') nopol
 	FROM m_member m
 	JOIN m_nopol n
 		ON n.id_member = m.id

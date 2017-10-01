@@ -116,10 +116,6 @@
 <script type="text/javascript" src="<?= base_url."assets/plugins/DataTables/Responsive-2.1.1/js/dataTables.responsive.min.js"; ?>"></script>
 <script type="text/javascript" src="<?= base_url."assets/plugins/DataTables/Responsive-2.1.1/js/responsive.bootstrap.min.js"; ?>"></script>
 <script type="text/javascript">
-    var base_url = "<?php print base_url; ?>";
-    var urlParams = <?php echo json_encode($_GET, JSON_HEX_TAG);?>;
-</script>
-<script type="text/javascript">
 	$(document).ready(function(){
 		// setting datatable
 		var tabel_harga = $("#tabel_harga").DataTable({
@@ -231,7 +227,6 @@
                     else{
                         reset_form();
                         // set error
-                        if(submit.toLowerCase()==="edit") $("#fmId_barang").prop("disabled", true);
                         setError(hasil.pesanError);
                         setValue(hasil.set_value);
                     }   

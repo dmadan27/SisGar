@@ -74,6 +74,10 @@
 		<title>Sistem Informasi Sewa Garasi Cesara</title>
 		<!-- jQuery -->
 		<script src="<?= base_url."assets/plugins/jQuery/jquery-2.2.3.min.js"; ?>"></script>
+		<script type="text/javascript">
+		    var base_url = "<?php print base_url; ?>";
+		    var urlParams = <?php echo json_encode($_GET, JSON_HEX_TAG);?>;
+		</script>
 		<!-- CSS -->
 		<?php include_once("app/views/template/css.php") ?>
 	</head>

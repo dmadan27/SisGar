@@ -11,4 +11,6 @@
 	<script src="<?= base_url."assets/dist/js/demo.js"; ?>"></script>
 	<script type="text/javascript" src="<?= base_url."assets/plugins/sweet-alert/sweet-alert.min.js"; ?>"></script>
  	<script type="text/javascript" src="<?= base_url."assets/plugins/alertifyjs/alertify.min.js"; ?>"></script>
+ 	<!-- sidebar active -->
+ 	<script type="text/javascript" src="<?= base_url."app/views/template/set_sidebar.js"; ?>"></script>
 <!-- end JS -->

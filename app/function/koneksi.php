@@ -2,7 +2,7 @@
 	$dbHost = "localhost"; //host/server yg dipakai
 	$dbUser = "root"; //username host/server 
 	$dbPass = ""; //password host
-	$dbName = "garasi"; //nama database
+	$dbName = "sisgar"; //nama database
 
 	try{
 		// buat object koneksi

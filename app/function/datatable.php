@@ -9,7 +9,8 @@
 			-> $tabel = tabel mana yg akan di eksekusi
 			-> $kolomOrder = array yg isinya kolom2 yg ada di datatable
 			-> $kolomCari = array yg isinya kolom2 yg bisa dicari
-			-> $orderBy = array yg isinya kolom2 yg bisa di order
+			-> $orderBy = array yg isinya kolom2 yg bisa di order, dapat berupa false jika tidak ada yg diorder
+			-> $kondisi = jika datatable ingin memakai where
 	*/
 	function setQuery($tabel, $kolomOrder, $kolomCari, $orderBy, $kondisi){
 		// inisialisasi request datatable

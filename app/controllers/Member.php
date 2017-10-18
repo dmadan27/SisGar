@@ -51,21 +51,15 @@
 			$aksi .= '<button type="button" class="btn btn-success btn-flat btn-sm" onclick="edit_member('."'".$row["id_member"]."'".')">Edit</button>';
 			$aksi .= '<button type="button" class="btn btn-danger btn-flat btn-sm" onclick="hapus_member('."'".$row["id_member"]."'".')">Hapus</button>';		
 			$aksi .= '</div>';
-			
-			$no_ktp = empty($row['no_ktp']) ? "-" : $row['no_ktp'];
-			$no_telp = empty($row['no_telp']) ? "-" : $row['no_telp'];
-			$pekerjaan = empty($row['pekerjaan']) ? "-" : $row['pekerjaan'];
-			$alamat = empty($row['alamat']) ? "-" : $row['alamat'];
-			$nopol = empty($row['nopol']) ? "-" : $row['nopol'];
 
 			$dataRow = array();
 			$dataRow[] = $no_urut;
-			$dataRow[] = $no_ktp;
+			$dataRow[] = empty($row['no_ktp']) ? "-" : $row['no_ktp'];
 			$dataRow[] = $row['nama'];
-			$dataRow[] = $no_telp;
-			$dataRow[] = $pekerjaan;
-			$dataRow[] = $alamat;
-			$dataRow[] = $nopol;
+			$dataRow[] = empty($row['no_telp']) ? "-" : $row['no_telp'];
+			$dataRow[] = empty($row['pekerjaan']) ? "-" : $row['pekerjaan'];
+			$dataRow[] = empty($row['alamat']) ? "-" : $row['alamat'];
+			$dataRow[] = empty($row['nopol']) ? "-" : $row['nopol'];
 			$dataRow[] = $aksi;
 
 			$data[] = $dataRow;

@@ -25,7 +25,7 @@
 	function login($koneksi){
 		$cek = true;
 		$status = false;
-		$usernameError = $passwordError = $pesanError = $set_value = "";
+		$usernameError = $passwordError = $setError = $setValue = "";
 
 		$username = validInputan($_POST['username'], false, true);
 		$password = validInputan($_POST['password'], false, true);
@@ -76,20 +76,20 @@
 
 		$_SESSION['sess_login'] = $status;
 
-		$pesanError = array(
-			'username' => $usernameError,
-			'password' => $passwordError,
+		$setError = array(
+			'usernameError' => $usernameError,
+			'passwordError' => $passwordError,
 		);
 
-		$set_value = array(
+		$setValue = array(
 			'username' => $username,
 			'password' => $password,
 		);
 
 		$output = array(
 			'status' => $status,
-			'pesanError' => $pesanError,
-			'set_value' => $set_value,
+			'setError' => $setError,
+			'setValue' => $setValue,
 		);
 
 		echo json_encode($output);

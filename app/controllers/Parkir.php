@@ -33,7 +33,7 @@
 	
 	function list_parkir($koneksi){
 		$config_db = array(
-			'tabel' => 'm_parkir',
+			'tabel' => 'parkir',
 			'kolomOrder' => array(null, 'no_parkir', 'status', null),
 			'kolomCari' => array('no_parkir', 'status'),
 			'orderBy' => array("no_parkir" => "asc"),

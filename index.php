@@ -79,31 +79,24 @@
 		    var urlParams = <?php echo json_encode($_GET, JSON_HEX_TAG);?>;
 		</script>
 		<!-- CSS -->
-		<?php include_once("app/views/template/css.php") ?>
+		<?php include_once("app/views/template/css/autoload_css.php") ?>
 	</head>
 	<body class="hold-transition skin-blue sidebar-mini">
 
 		<!-- Site Wrapper -->
 		<div class="wrapper">
-			<!-- Header -->
-			<?php include_once("app/views/template/header.php") ?>
-
-			<!-- Sidebar -->
-			<?php include_once("app/views/template/sidebar.php") ?>
-
-			<!-- Content -->
-			<?php include_once("app/views/template/content.php") ?>
-
-			<!-- Footer -->
-			<?php include_once("app/views/template/footer.php") ?>
-
-			<!-- Control Sidebar -->
-			<?php include_once("app/views/template/control_sidebar.php") ?>
-
+			<?php 
+				include_once("app/views/template/header.php"); // header
+				include_once("app/views/template/sidebar.php"); // sidebar
+				include_once("app/views/template/content.php"); // content
+				include_once("app/views/template/footer.php"); // footer
+				include_once("app/views/template/control_sidebar.php"); // Control Sidebar 
+			?>
 		</div>
 		<!-- ./wrapper -->
 		
 		<!-- JavaScript -->
-		<?php include_once("app/views/template/javascript.php") ?>
+		<?php include_once("app/views/template/js/autoload_js.php") ?>
+		<script type="text/javascript" src="<?= base_url."app/views/template/js/set_sidebar.js"; ?>"></script>
 	</body>
 </html>

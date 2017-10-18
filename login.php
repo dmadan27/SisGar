@@ -29,8 +29,11 @@
 	  	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	 	<!-- jQuery -->
 		<script src="<?= base_url."assets/plugins/jQuery/jquery-2.2.3.min.js"; ?>"></script>
+		<script type="text/javascript">
+            var base_url = "<?php print base_url; ?>";
+        </script>
 		<!-- CSS -->
-		<?php include_once("app/views/template/css.php") ?>
+		<?php include_once("app/views/template/css/autoload_css.php") ?>
 	</head>
 	<body class="hold-transition login-page">
 		<div class="login-box">
@@ -66,11 +69,8 @@
 		  	<!-- /.login-box-body -->
 		</div>
 		<!-- JavaScript -->
-		<?php include_once("app/views/template/javascript.php") ?>
+		<?php include_once("app/views/template/js/autoload_js.php") ?>
 		<!-- js custom -->
-		<script type="text/javascript">
-            var base_url = "<?php print base_url; ?>";
-        </script>
         <script type="text/javascript">
         	$(document).ready(function(){
         		$("#username").change(function(){
@@ -105,10 +105,8 @@
         				console.log(hasil);
         				if(hasil.status) document.location=base_url;
         				else{
-        					// set error
-        					set_error(hasil.pesanError);
-        					// set value
-        					set_value(hasil.set_value);
+        					setError(hasil.setError);
+        					setValue(hasil.setValue);
         				}
         			},
         			error: function (jqXHR, textStatus, errorThrown) { // error handling
@@ -118,24 +116,24 @@
         		})
         	}
 
-        	function set_value(data){
-        		$("#username").val(data.username);
-        		$("#password").val(data.password);
+        	function setValue(value){
+        		$("#username").val(value.username);
+        		$("#password").val(value.password);
         	}
 
-        	function set_error(data){
-        		if(!jQuery.isEmptyObject(data.username)){
+        	function setError(error){
+        		if(!jQuery.isEmptyObject(error.usernameError)){
         			$('.field-username').addClass('has-error');
-        			$('.field-username').find('.help-block').text(data.username);
+        			$('.field-username').find('.help-block').text(error.usernameError);
         		}
         		else{
         			$('.field-username').removeClass('has-error');
         			$('.field-username').find('.help-block').text('');
         		}
 
-        		if(!jQuery.isEmptyObject(data.password)){
+        		if(!jQuery.isEmptyObject(error.passwordError)){
         			$('.field-password').addClass('has-error');
-        			$('.field-password').find('.help-block').text(data.password);
+        			$('.field-password').find('.help-block').text(error.passwordError);
         		}
         		else{
         			$('.field-password').removeClass('has-error');

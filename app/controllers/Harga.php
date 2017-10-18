@@ -33,7 +33,7 @@
 
 	function list_harga($koneksi){
 		$config_db = array(
-			'tabel' => 'm_harga',
+			'tabel' => 'harga',
 			'kolomOrder' => array(null, 'jenis', 'harga', null),
 			'kolomCari' => array('jenis', 'harga'),
 			'orderBy' => false,

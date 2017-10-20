@@ -21,6 +21,16 @@
 		return $result;
 	}
 
+	function get_adminAktif($koneksi){
+		$query = "SELECT COUNT(*) admin_aktif FROM admin WHERE status = '1'";
+		$statement = $koneksi->prepare($query);
+		$statement->execute();
+		$result = $statement->fetch(PDO::FETCH_ASSOC);
+		tutup_koneksi($koneksi);
+
+		return $result;
+	}
+
 	function insertAdmin($koneksi, $data){
 		$status = "1";
 		$query = "INSERT INTO admin (username, password, nama, email, level, foto, status) VALUES (:username, :password, :nama, :email, :level, :foto, :status)";

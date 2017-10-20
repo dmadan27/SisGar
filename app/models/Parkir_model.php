@@ -9,6 +9,16 @@
 		return $result;
 	}
 
+	function get_parkirTersedia($koneksi){
+		$query = "SELECT COUNT(*) parkir_tersedia FROM parkir WHERE status = '1'";
+		$statement = $koneksi->prepare($query);
+		$statement->execute();
+		$result = $statement->fetch(PDO::FETCH_ASSOC);
+		tutup_koneksi($koneksi);
+
+		return $result;
+	}
+
 	function insertParkir($koneksi, $data){
 		$status = "1";
 		$query = "INSERT INTO m_parkir (no_parkir, status) VALUES (:no_parkir, :status)";

@@ -292,7 +292,7 @@ CREATE OR REPLACE VIEW v_sewa AS
 		ON p.id = s.id_parkir
 	JOIN admin a
 		ON a.username = s.admin
-	ORDER BY s.id DESC, status DESC, s.tgl_sewa DESC;
+	ORDER BY s.jatuh_tempo DESC, status DESC;
 -- =============================================================
 
 -- view keuangan
